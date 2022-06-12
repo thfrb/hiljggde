@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emma
+  name: yan
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: emma
+      app: yan
   template:
     metadata:
       labels:
-        app: emma
+        app: yan
     spec:
       containers:
-      - image: okteto.dev/emma:latest
-        name: emma
+      - image: okteto.dev/yan:latest
+        name: yan
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "dba9eab6-2936-4595-afa2-0e3208994069"
+          value: "7daf9afc-9632-4989-9ca5-45cd0d48f3b7"
         - name: Vless_Path
-          value: "/qaz"
+          value: "/qwe"
         - name: Vmess_UUID
-          value: "dba9eab6-2936-4595-afa2-0e3208994069"
+          value: "7daf9afc-9632-4989-9ca5-45cd0d48f3b7"
         - name: Vmess_Path
-          value: "/edc"
+          value: "/rty"
         - name: Share_Path
           value: "$Share_Path"
