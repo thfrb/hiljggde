@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wow
+  name: bob
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wow
+      app: bob
   template:
     metadata:
       labels:
-        app: wow
+        app: bob
     spec:
       containers:
       - image: okteto.dev/ray:latest
-        name: wow
+        name: bob
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "185624b9-cf2e-4ee7-9cae-87e9a6de150d"
+          value: "8dbdab9e-c355-4f50-96be-0ba57972d8bb"
         - name: Vless_Path
-          value: "/ss"
+          value: "/aa"
         - name: Vmess_UUID
-          value: "185624b9-cf2e-4ee7-9cae-87e9a6de150d"
+          value: "8dbdab9e-c355-4f50-96be-0ba57972d8bb"
         - name: Vmess_Path
-          value: "/mm"
+          value: "/bb"
         - name: Share_Path
           value: "$Share_Path"
