@@ -13,7 +13,7 @@ spec:
         app: wsx
     spec:
       containers:
-      - image: okteto.dev/ray:latest
+      - image: okteto.dev/wsx:latest
         name: wsx
         ports:
         - containerPort: 8080
