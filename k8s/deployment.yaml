@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: three
+  name: sam
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: three
+      app: sam
   template:
     metadata:
       labels:
-        app: three
+        app: sam
     spec:
       containers:
-      - image: okteto.dev/three:latest
-        name: three
+      - image: okteto.dev/sam:latest
+        name: sam
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "573f4e0d-75a9-4a56-bd53-655e261ab8e8"
+          value: "470806e7-3e23-43f3-9fd7-c4d66abd8416"
         - name: Vless_Path
-          value: "/ga"
+          value: "/yy"
         - name: Vmess_UUID
-          value: "573f4e0d-75a9-4a56-bd53-655e261ab8e8"
+          value: "470806e7-3e23-43f3-9fd7-c4d66abd8416"
         - name: Vmess_Path
-          value: "/gb"
+          value: "/yu"
         - name: Share_Path
           value: "$Share_Path"
