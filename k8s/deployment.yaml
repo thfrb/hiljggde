@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wsx
+  name: baa
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wsx
+      app: baa
   template:
     metadata:
       labels:
-        app: wsx
+        app: baa
     spec:
       containers:
-      - image: okteto.dev/wsx:latest
-        name: wsx
+      - image: okteto.dev/baa:latest
+        name: baa
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "9ac22c10-454f-4865-bf67-adc6c14196b2"
+          value: "d9a67a51-465a-4efe-8543-2de8adb7c2ed"
         - name: Vless_Path
-          value: "/qa"
+          value: "/zx"
         - name: Vmess_UUID
-          value: "9ac22c10-454f-4865-bf67-adc6c14196b2"
+          value: "d9a67a51-465a-4efe-8543-2de8adb7c2ed"
         - name: Vmess_Path
-          value: "/wss"
+          value: "/xc"
         - name: Share_Path
           value: "$Share_Path"
