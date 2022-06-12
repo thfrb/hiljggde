@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: live
+  name: foot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: live
+      app: foot
   template:
     metadata:
       labels:
-        app: live
+        app: foot
     spec:
       containers:
-      - image: okteto.dev/live:latest
-        name: live
+      - image: okteto.dev/foot:latest
+        name: foot
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "c12a078e-8b01-4920-81e3-6fb8c23e8e06"
+          value: "4e28b762-4d71-4eb4-aed9-babb7be4154c"
         - name: Vless_Path
-          value: "/ba"
+          value: "/123"
         - name: Vmess_UUID
-          value: "c12a078e-8b01-4920-81e3-6fb8c23e8e06"
+          value: "4e28b762-4d71-4eb4-aed9-babb7be4154c"
         - name: Vmess_Path
-          value: "/ma"
+          value: "/456"
         - name: Share_Path
           value: "$Share_Path"
