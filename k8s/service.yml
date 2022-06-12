@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: three
+  name: sam
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "three"
+  - name: "sam"
     port: 8080
   selector:
-    app: three
+    app: sam
