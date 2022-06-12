@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kill
+  name: see
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "kill"
+  - name: "see"
     port: 8080
   selector:
-    app: kill
+    app: see
