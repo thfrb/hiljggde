@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: daar
+  name: wan
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: daar
+      app: wan
   template:
     metadata:
       labels:
-        app: daar
+        app: wan
     spec:
       containers:
-      - image: okteto.dev/daar:latest
-        name: daar
+      - image: okteto.dev/wan:latest
+        name: wan
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "a8b1c430-ccc9-49cd-a446-2970120ee08b"
+          value: "0e45b2d4-af8a-47ba-9092-a626ce95b371"
         - name: Vless_Path
-          value: "/rt"
+          value: "/vivo"
         - name: Vmess_UUID
-          value: "a8b1c430-ccc9-49cd-a446-2970120ee08b"
+          value: "0e45b2d4-af8a-47ba-9092-a626ce95b371"
         - name: Vmess_Path
-          value: "/ty"
+          value: "/oppo"
         - name: Share_Path
           value: "$Share_Path"
