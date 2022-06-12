@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nana
+  name: ban
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "nana"
+  - name: "ban"
     port: 8080
   selector:
-    app: nana
+    app: ban
