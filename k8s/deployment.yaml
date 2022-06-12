@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ban
+  name: red
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ban
+      app: red
   template:
     metadata:
       labels:
-        app: ban
+        app: red
     spec:
       containers:
       - image: okteto.dev/ray:latest
-        name: ban
+        name: red
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "f8238f0f-7ed6-4a08-a02d-4a66628f186f"
+          value: "70a1099c-d718-47ee-ac92-5826d1e66aa3"
         - name: Vless_Path
-          value: "/jj"
+          value: "/qq"
         - name: Vmess_UUID
-          value: "f8238f0f-7ed6-4a08-a02d-4a66628f186f"
+          value: "70a1099c-d718-47ee-ac92-5826d1e66aa3"
         - name: Vmess_Path
-          value: "/hh"
+          value: "/ww"
         - name: Share_Path
           value: "$Share_Path"
