@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mao
+  name: bite
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "mao"
+  - name: "bite"
     port: 8080
   selector:
-    app: mao
+    app: bite
