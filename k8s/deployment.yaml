@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wan
+  name: kill
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wan
+      app: kill
   template:
     metadata:
       labels:
-        app: wan
+        app: kill
     spec:
       containers:
       - image: okteto.dev/wan:latest
-        name: wan
+        name: kill
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "vumoo.to"
         - name: Vless_UUID
-          value: "0e45b2d4-af8a-47ba-9092-a626ce95b371"
+          value: "ec6b65ed-fdc9-4ba1-821f-c8a565114380"
         - name: Vless_Path
-          value: "/vivo"
+          value: "/app"
         - name: Vmess_UUID
-          value: "0e45b2d4-af8a-47ba-9092-a626ce95b371"
+          value: "ec6b65ed-fdc9-4ba1-821f-c8a565114380"
         - name: Vmess_Path
-          value: "/oppo"
+          value: "/ssb"
         - name: Share_Path
           value: "$Share_Path"
